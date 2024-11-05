@@ -46,7 +46,7 @@ jobs:
           images: '${{ secrets.registry }}.azurecr.io/${{ secrets.repository }}/azure-vote-front:${{ github.sha }}'
           pull-images: false
       - name: Run Prisma Cloud
-        id: Prisma Cloud
+        id: Prisma_Cloud
         uses: bridgecrewio/checkov-action@master
         env:
           PRISMA_API_URL: https://api.eu.prismacloud.io
