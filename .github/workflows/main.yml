@@ -53,4 +53,12 @@ jobs:
         with:
           api-key: ${{ secrets.BC_API_KEY }}
           use_enforcement_rules: true
+      - name: Upload SARIF report
+        uses: actions/upload-artifact@v2
+        if: ${{ always() }}
+        with:
+          name: SARIF results Checkov
+          path: results.sarif
+      - name: Run yor action
+        uses: bridgecrewio/yor-action@main
 
