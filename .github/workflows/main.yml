@@ -4,6 +4,7 @@ on:
     paths:
       - "azure-vote/**"
       - "jenkins-tutorial/**"
+      - "docker-compose.yaml"
 jobs:
   build:
     runs-on: ubuntu-latest
