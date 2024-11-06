@@ -3,6 +3,7 @@ on:
   push:
     paths:
       - "azure-vote/**"
+      - "jenkins-tutorial/**"
 jobs:
   build:
     runs-on: ubuntu-latest
